@@ -1,5 +1,8 @@
 # k8s-dvwa
 
+## Notice
+Do not use these for bad.
+
 ```
 kubectl create cm config.inc.php --from-file=config.inc.php
 ```
