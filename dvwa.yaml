@@ -38,7 +38,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: dvwa
-  name: svc-dvwax
+  name: svc-dvwa
 spec:
   ports:
   - port: 80
