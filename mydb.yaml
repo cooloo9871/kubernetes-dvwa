@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mydb
+  name: mydb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mydb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mydb
+    spec:
+      containers:
+      - image: mariadb
+        name: mariadb
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          value: vulnerables
+        ports:
+        - containerPort: 3306
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mydb
+  name: mydb
+spec:
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    app: mydb
+status:
+  loadBalancer: {}
