@@ -15,7 +15,7 @@ spec:
       namespace: default
     spec:
       containers:
-      - image: vulnerables/web-dvwa
+      - image: taiwanese/web-dvwa
         imagePullPolicy: IfNotPresent
         name: dvwa
         ports:
