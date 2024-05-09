@@ -3,6 +3,9 @@
 ## Notice
 Do not use these for bad.
 
+```
+git clone https://github.com/cooloo9871/kubernetes-dvwa.git;cd kubernetes-dvwa/
+```
 This is for k8s DAMN VULNERABLE WEB APPLICATION environment.
 ```
 kubectl create cm config.inc.php --from-file=config.inc.php
